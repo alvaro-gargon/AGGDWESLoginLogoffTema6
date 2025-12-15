@@ -13,7 +13,7 @@
         <h2>LOGIN LOGOFF TEMA 5</h2>
     </header>
     <main>
-        <?php require_once $view['inicioPublico'];?>
+        <?php require_once $view[$_SESSION['paginaEnCurso']];?>
     </main>
     <footer>
         <p><a href="https://alvarogargon.ieslossauces.es/">Álvaro García González</a></p>
