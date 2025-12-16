@@ -1,4 +1,6 @@
-<h1>Bienvenido al inicio privado de la aplicacion</h1>
-<form method="post" id="inicioSesion">
-    <button class="botonGenericoFormulario" name="LOGOFF">LOGOFF</button>
+
+<h2 class="mensaje">Bienvenido al inicio privado de la aplicacion</h2>
+<form method="post">
+    <button class="login" name="LOGOFF">LOGOFF</button>
+    <button class="detalle" name="DETALLE">DETALLE</button>
 </form>

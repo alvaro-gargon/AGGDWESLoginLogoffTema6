@@ -13,7 +13,8 @@ require_once 'core/231018libreriaValidacion.php';
 $controller=[
     'inicioPublico' => 'controller/cInicioPublico.php',
     'login' => 'controller/clogin.php',
-    'inicioPrivado'=>'controller/cInicioPrivado.php'
+    'inicioPrivado'=>'controller/cInicioPrivado.php',
+    'detalle'=>'controller/cDetalle.php'
 ];
 
 //array para cargar los archivos de la vista
@@ -21,6 +22,7 @@ $view=[
     'layout' => 'view/Layout.php',
     'inicioPublico' => 'view/vInicioPublico.php',
     'login'=>'view/vlogin.php',
-    'inicioPrivado'=>'view/vInicioPrivado.php'
+    'inicioPrivado'=>'view/vInicioPrivado.php',
+    'detalle'=>'view/vDetalle.php'
 ];
 ?>

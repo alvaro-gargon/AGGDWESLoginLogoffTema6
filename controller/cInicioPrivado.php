@@ -7,5 +7,11 @@
         header('Location: indexLoginLogoff.php');
         exit;
     }
+    if(isset($_REQUEST['DETALLE'])){
+        $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
+        $_SESSION['paginaEnCurso']='detalle';
+        header('Location: indexLoginLogoff.php');
+        exit;
+    }
     require_once $view['layout'];
 ?>
