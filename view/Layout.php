@@ -9,7 +9,6 @@
 </head>
 <body>
     <header>
-        <h1>INICIO PUBLICO</h1>
         <h2>LOGIN LOGOFF</h2>
     </header>
     <main>
