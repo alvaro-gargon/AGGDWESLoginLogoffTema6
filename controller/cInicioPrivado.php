@@ -1,7 +1,11 @@
 <?php
 /*  Nombre: Alvaro Garcia Gonzalez
-*   Fecha: 15/12/2025
+*   Fecha: 16/12/2025
 *   Uso:  controlador del inicoPrivado*/ 
-    
+    if(isset($_REQUEST['LOGOFF'])){
+        $_SESSION['paginaEnCurso']='login';
+        header('Location: indexLoginLogoff.php');
+        exit;
+    }
     require_once $view['layout'];
 ?>
