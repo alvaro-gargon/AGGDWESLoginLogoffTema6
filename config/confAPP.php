@@ -14,7 +14,10 @@ $controller=[
     'inicioPublico' => 'controller/cInicioPublico.php',
     'login' => 'controller/clogin.php',
     'inicioPrivado'=>'controller/cInicioPrivado.php',
-    'detalle'=>'controller/cDetalle.php'
+    'detalle'=>'controller/cDetalle.php',
+    'registro'=>'controller/cRegistro.php',
+    'miCuenta'=>'controller/cMiCuenta.php',
+    'borrarCuenta'=>'controller/cBorrarCuenta.php'
 ];
 
 //array para cargar los archivos de la vista
@@ -23,6 +26,9 @@ $view=[
     'inicioPublico' => 'view/vInicioPublico.php',
     'login'=>'view/vlogin.php',
     'inicioPrivado'=>'view/vInicioPrivado.php',
-    'detalle'=>'view/vDetalle.php'
+    'detalle'=>'view/vDetalle.php',
+    'registro'=>'view/vRegistro.php',
+    'miCuenta'=>'view/vMiCuenta.php',
+    'borrarCuenta'=>'view/vBorrarCuenta.php'
 ];
 ?>

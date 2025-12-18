@@ -16,7 +16,7 @@
     </main>
     <footer>
         <p><a target="_blank" href="https://alvarogargon.ieslossauces.es/">Álvaro García González</a></p>
-        <a href="https://github.com/alvaro-gargon/AGGDWESLoginLogoffTema6"><i class="fa fa-github fa-2x"></i></a>
+        <a target="_blank" href="https://github.com/alvaro-gargon/AGGDWESLoginLogoffTema6"><i class="fa fa-github fa-2x"></i></a>
         <p>Última actualización <time datetime="2025-12-16">16/12/2025</time></p>
     </footer>
 </body>
