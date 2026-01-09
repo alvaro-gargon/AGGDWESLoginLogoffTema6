@@ -9,24 +9,25 @@ require_once 'DBPDO.php';
 class UsuarioPDO {
 
     public static function validarUsuario($codUsuario,$password) {
+        $oUsuario=null;
         $consulta = <<<CONSULTA
             SELECT *
             FROM T01_Usuario 
-            WHERE T01_CodUsuario= :usuario AND 
-            T01_Password = sha2(:passwd,256)
+            WHERE T01_CodUsuario= '{$codUsuario}' AND 
+            T01_Password = sha2('{$codUsuario}{$password}',256)
             CONSULTA;
         
-        $resultado= DBPDO::ejecutaConsulta($sentenciaSQL, [':usuario' => $codUsuario, ':password' =>$codUsuario.$password]);
+        $resultado= DBPDO::ejecutaConsulta($consulta);
         $oResultado=$resultado->fetchObject();
-        if($oResultado->rowCount()>1){
-            $usuario=new Usuario(
-                $oResultado['T01_CodUsuario'],
-                $oResultado['T01_Password'],
-                $oResultado['T01_DescUsuario'],
-                $oResultado['T01_NumConexiones'],
-                new DateTime($oResultado['T01_FechaHoraUltimaConexion']),
-                null,
-                $oResultado['T01_Perfil']
+        if($resultado->rowCount()>0){
+            $oUsuario=new Usuario(
+                $oResultado->T01_CodUsuario,
+                $oResultado->T01_Password,
+                $oResultado->T01_DescUsuario,
+                $oResultado->T01_NumConexiones,
+                $oResultado->T01_FechaHoraUltimaConexion,
+                $oResultado->T01_FechaHoraUltimaConexionAnterior=null,
+                $oResultado->T01_Perfil
             );
         }
     }

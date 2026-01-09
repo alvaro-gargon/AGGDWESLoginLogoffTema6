@@ -5,7 +5,9 @@
 *   Uso:  requires de todos los archivos del modelo necesitado*/ 
 //incluyo la libreria de validacion
 require_once 'core/231018libreriaValidacion.php';
-
+require_once 'model/UsuarioPDO.php';
+require_once 'model/DBPDO.php';
+require_once 'model/Usuario.php';
 //aqui se incluyen todos los archivos del modelo
 
 

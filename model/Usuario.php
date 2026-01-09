@@ -4,15 +4,22 @@
 *   Fecha: 18/12/2025
 *   Uso:  clase Usuario con su constructor y sus atributos*/
 class Usuario {
+    private $codUsuario;
+    private $password;
+    private $descUsuario;
+    private $numAccesos;
+    private $fechaHoraUltimaConexion;
+    private $fechaHoraUltimaConexionAnterior;
+    private $perfil;
 
     public function __construct($codUsuario,$password,$descUsuario,$numAccesos,$fechaHoraUltimaConexion,$fechaHoraUltimaConexionAnterior,$perfil) {
-        this->codUsuario =$codUsuario;
-        this->password =$password;
-        this->descUsuario =$descUsuario;
-        this->numAccesos =$numAccesos;
-        this->fechaHoraUltimaConexion =$fechaHoraUltimaConexion;
-        this->fechaHoraUltimaConexionAnterior =$fechaHoraUltimaConexionAnterior;
-        this->perfil =$perfil;
+        $this->codUsuario =$codUsuario;
+        $this->password =$password;
+        $this->descUsuario =$descUsuario;
+        $this->numAccesos =$numAccesos;
+        $this->fechaHoraUltimaConexion =$fechaHoraUltimaConexion;
+        $this->fechaHoraUltimaConexionAnterior =$fechaHoraUltimaConexionAnterior;
+        $this->perfil =$perfil;
     }
     
     public function getCodUsuario() {

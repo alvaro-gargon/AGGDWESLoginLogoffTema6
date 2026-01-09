@@ -14,12 +14,17 @@
         'contraseña'=>null
     ];
     if(isset($_REQUEST['ENTRAR'])){
+        $oUsuarioActivo= UsuarioPDO::validarUsuario($_REQUEST['usuario'], $_REQUEST['contraseña']);
+        if(isset($oUsuarioActivo)){
+            $entradaOK=false;
+        }
         $aErrores['usuario']= validacionFormularios::comprobarAlfaNumerico($_REQUEST['usuario'],obligatorio:1);//validacion sintactica del campo usuario
         foreach ($aErrores as $clave => $valor){
             if($valor!=null){
                 $entradaOK=false;
             }
         }
+        
     }else{
         $entradaOK=false;
     }
@@ -27,7 +32,6 @@
     
     if($entradaOK){
         //$oUsuarioActivo= UsuarioPDO::registrarUltimaConexion();
-        //$_SESSION['usuarioActivo']=$oUsuarioActivo;
         $_SESSION['paginaEnCurso']='inicioPrivado';
         header('Location: indexLoginLogoff.php');
         exit;
