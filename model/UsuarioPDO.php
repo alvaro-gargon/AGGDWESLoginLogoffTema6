@@ -18,8 +18,9 @@ class UsuarioPDO {
             CONSULTA;
         
         $resultado= DBPDO::ejecutaConsulta($consulta);
-        $oResultado=$resultado->fetchObject();
+        
         if($resultado->rowCount()>0){
+            $oResultado=$resultado->fetchObject();
             $oUsuario=new Usuario(
                 $oResultado->T01_CodUsuario,
                 $oResultado->T01_Password,
