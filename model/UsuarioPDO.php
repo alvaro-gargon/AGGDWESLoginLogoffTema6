@@ -49,7 +49,7 @@ class UsuarioPDO {
         DBPDO::ejecutaConsulta($consultaActualizar);
         
         //actualizamos la propiedad de la clase que no esta en la base de datos
-        $oUsuarioAActualizar->setFechaHoraUltimaConexionAnterior($oUsuarioAActualizar->getFechaHoraUltimaConexion());
+        $oUsuarioAActualizar->setFechaHoraUltimaConexionAnterior(new DateTime($oUsuarioAActualizar->getFechaHoraUltimaConexion()));
         //ahora se actualiza el usuario en memoria
         $oUsuarioAActualizar->setNumAccesos($oUsuarioAActualizar->getNumAccesos()+1);
         $oUsuarioAActualizar->setFechaHoraUltimaConexion(new DateTime());
