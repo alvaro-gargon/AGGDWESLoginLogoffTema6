@@ -8,16 +8,17 @@ require_once 'Usuario.php';
 require_once 'DBPDO.php';
 class UsuarioPDO {
 
+    //funcion que comprueba si el usuario existe mediante una consulta sql
     public static function validarUsuario($codUsuario,$password) {
         $oUsuario=null;
-        $consulta = <<<CONSULTA
+        $consultaValidar = <<<CONSULTA
             SELECT *
             FROM T01_Usuario 
             WHERE T01_CodUsuario= '{$codUsuario}' AND 
             T01_Password = sha2('{$codUsuario}{$password}',256)
             CONSULTA;
         
-        $resultado= DBPDO::ejecutaConsulta($consulta);
+        $resultado= DBPDO::ejecutaConsulta($consultaValidar);
         
         if($resultado->rowCount()>0){
             $oResultado=$resultado->fetchObject();
@@ -31,6 +32,27 @@ class UsuarioPDO {
                 $oResultado->T01_Perfil
             );
         }
+        return $oUsuario;
+    }
+    
+    //funcion que actualiza las fechas de las conexiones del usuario activo
+    public static  function actualizarUltimaConexion($oUsuarioAActualizar){
+        //actualizamos en la base de datos la fecha de la conexion y el numero de estas
+        date_default_timezone_set('Europe/Madrid');
+        $consultaActualizar = <<<CONSULTA
+            UPDATE T01_Usuario
+            SET T01_FechaHoraUltimaConexion = NOW(),
+                T01_NumConexiones = T01_NumConexiones + 1
+            WHERE T01_CodUsuario= '{$oUsuarioAActualizar->getCodUsuario()}'
+            CONSULTA;
+        //ejecutamos la consulta
+        DBPDO::ejecutaConsulta($consultaActualizar);
+        
+        //actualizamos la propiedad de la clase que no esta en la base de datos
+        $oUsuarioAActualizar->setFechaHoraUltimaConexionAnterior($oUsuarioAActualizar->getFechaHoraUltimaConexion());
+        //ahora se actualiza el usuario en memoria
+        $oUsuarioAActualizar->setNumAccesos($oUsuarioAActualizar->getNumAccesos()+1);
+        $oUsuarioAActualizar->setFechaHoraUltimaConexion(new DateTime());
     }
 }
 

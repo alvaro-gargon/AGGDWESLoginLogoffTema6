@@ -23,31 +23,31 @@ class Usuario {
     }
     
     public function getCodUsuario() {
-        return this->codUsuario;
+        return $this->codUsuario;
     }
     
     public function getPassword() {
-        return this->password;
+        return $this->password;
     }
     
     public function getDescUsuario() {
-        return this->descUsuario;
+        return $this->descUsuario;
     }
     
     public function getNumAccesos() {
-        return this->numAccesos;
+        return $this->numAccesos;
     }
     
     public function getFechaHoraUltimaConexion() {
-        return this->fechaHoraUltimaConexion;
+        return $this->fechaHoraUltimaConexion;
     }
     
     public function getFechaHoraUltimaConexionAnterior() {
-        return this->fechaHoraUltimaConexionAnterior;
+        return $this->fechaHoraUltimaConexionAnterior;
     }
     
     public function getPerfil() {
-        return this->perfil;
+        return $this->perfil;
     }
     
     public function setCodUsuario($codUsuario){
