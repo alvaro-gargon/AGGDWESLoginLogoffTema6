@@ -13,5 +13,11 @@
         header('Location: indexLoginLogoff.php');
         exit;
     }
+    
+    $avInicioPrivado=[
+        'descUsuario' => $_SESSION['usuarioMiAplicacion']->getDescUsuario(),
+        'numConexiones' => $_SESSION['usuarioMiAplicacion']->getNumAccesos(),
+        'fechaHoraUltimaConexionAnterior' => $_SESSION['usuarioMiAplicacion']->getFechaHoraUltimaConexionAnterior()
+    ];
     require_once $view['layout'];
 ?>

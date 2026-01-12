@@ -31,7 +31,7 @@
     
     if($entradaOK){
         UsuarioPDO::actualizarUltimaConexion($oUsuarioActivo);
-        $_SESSION['usarioMiAplicacion']=$oUsuarioActivo;
+        $_SESSION['usuarioMiAplicacion']=$oUsuarioActivo;
         $_SESSION['paginaEnCurso']='inicioPrivado';
         header('Location: indexLoginLogoff.php');
         exit;
