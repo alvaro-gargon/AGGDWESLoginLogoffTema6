@@ -8,9 +8,9 @@
  */
 
 -- Creacion de la base de datos
-create database if not exists DBAGGDWESProyectoLoginLogoffTema6;
+create database if not exists DBAGGDWESProyectoLoginLogoff;
 -- me situo en ella
-use DBAGGDWESProyectoLoginLogoffTema6;
+use DBAGGDWESProyectoLoginLogoff;
 
 
 --creamos la tabla sino existe, aunque nunca deberia existir cuando ejecutamos el script
@@ -35,7 +35,7 @@ create table if not exists T01_Usuario(
 )engine=innodb;
 
 --creo el usuario con todos los privilegios sobre la base de datos
-create user if not exists'userAGGDWESProyectoLoginLogoffTema6'@'%' identified by 'paso';
-grant all on DBAGGDWESProyectoLoginLogoffTema6.* to 'userAGGDWESProyectoLoginLogoffTema6'@'%' with grant option;
+create user if not exists'userAGGDWESProyectoLoginLogoff'@'%' identified by 'paso';
+grant all on DBAGGDWESProyectoLoginLogoff.* to 'userAGGDWESProyectoLoginLogoff'@'%' with grant option;
 --refrescamos los privilegios para asegurarnos que se ha actualizado
 flush privileges;

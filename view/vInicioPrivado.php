@@ -2,6 +2,7 @@
     <p id="arribaDerecha"><button class="login" name="LOGOFF">LOGOFF</button></p>
 </form>
 <h2 class="mensaje">Bienvenido al inicio privado de la aplicacion</h2>
+    <div class="mensaje">
 <?php
     if ($avInicioPrivado['numConexiones'] <= 1) {
         echo "¡Esta es tu primera conexión!<br>";
@@ -23,6 +24,7 @@
         }
     }
 ?>
+    </div>
 <form method="post">
     <button class="detalle" name="DETALLE">DETALLE</button>
 </form>

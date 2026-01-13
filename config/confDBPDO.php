@@ -7,10 +7,10 @@
 
 
 
-    //define('DNS' ,'mysql:host=192.168.1.134;dbname:DBAGGDWESProyectoTema6'); //variable para el entorno en casa
-    //define('DNS', 'mysql:host=localhost;dbname:DBAGGDWESProyectoLoginLogoffTema6'); //variable para explotacion
-    define('DNS', 'mysql:host=10.199.11.252;dbname=DBAGGDWESProyectoLoginLogoffTema6');
-    define('USERNAME', 'userAGGDWESProyectoLoginLogoffTema6');
+    //define('DNS' ,'mysql:host=192.168.1.134;dbname=DBAGGDWESProyecto'); //variable para el entorno en casa
+    //define('DNS', 'mysql:host=localhost;dbname=DBAGGDWESProyectoLoginLogoff'); //variable para explotacion
+    define('DNS', 'mysql:host=10.199.11.252;dbname=DBAGGDWESProyectoLoginLogoff');
+    define('USERNAME', 'userAGGDWESProyectoLoginLogoff');
     define('PASSWORD', 'paso');
     //define('PASSWORD', 'Paso,12345678910');//la contraseña es la de la base de datos de plesk
 
