@@ -19,7 +19,8 @@ $controller=[
     'detalle'=>'controller/cDetalle.php',
     'registro'=>'controller/cRegistro.php',
     'miCuenta'=>'controller/cMiCuenta.php',
-    'borrarCuenta'=>'controller/cBorrarCuenta.php'
+    'borrarCuenta'=>'controller/cBorrarCuenta.php',
+    'WIP'=>'controller/cWIP.php'
 ];
 
 //array para cargar los archivos de la vista
@@ -31,6 +32,7 @@ $view=[
     'detalle'=>'view/vDetalle.php',
     'registro'=>'view/vRegistro.php',
     'miCuenta'=>'view/vMiCuenta.php',
-    'borrarCuenta'=>'view/vBorrarCuenta.php'
+    'borrarCuenta'=>'view/vBorrarCuenta.php',
+    'WIP'=>'view/vWIP.php'
 ];
 ?>
