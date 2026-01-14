@@ -1,6 +1,6 @@
 <?php
 /*  Nombre: Alvaro Garcia Gonzalez
-*   Fecha: 16/12/2025
+*   Fecha: 14/01/2026
 *   Uso:  controlador del detalle*/
 
     if(isset($_REQUEST['VOLVER'])){
