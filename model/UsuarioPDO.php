@@ -70,16 +70,20 @@ class UsuarioPDO {
      */
     public static function altaUsuario($codUsuario,$password,$descUsuario) {
         $oUsuario=null;
-        try{
-        $consultaValidar = <<<CONSULTA
+        $consultaComprobarCodigo = <<<CONSULTA
+            SELECT *
+            FROM T01_Usuario 
+            WHERE T01_CodUsuario= '{$codUsuario}'
+            CONSULTA;
+        $resultado= DBPDO::ejecutaConsulta($consultaComprobarCodigo);
+        if($resultado->rowCount()==0){
+            $consultaAlta = <<<CONSULTA
             INSERT INTO T01_Usuario (T01_CodUsuario, T01_Password, T01_DescUsuario, T01_Perfil) 
             VALUES ('{$codUsuario}', SHA2('{$codUsuario}{$password}', 256), '{$descUsuario}', 'usuario')
             CONSULTA;
         
-        DBPDO::ejecutaConsulta($consultaValidar);
-        $oUsuario= self::validarUsuario($codUsuario, $password);
-        } catch(PDOException $exception){
-            return null;
+            DBPDO::ejecutaConsulta($consultaAlta);
+            $oUsuario= self::validarUsuario($codUsuario, $password);
         }
         return $oUsuario;
     }

@@ -23,17 +23,17 @@
      * acciones que pasaran si el usuario intenta registrarse
      */
     if(isset($_REQUEST['ACEPTAR'])){
-        $oUsuarioActivo= UsuarioPDO::altaUsuario($_REQUEST['usuario'], $_REQUEST['contraseña'],$_REQUEST['descripcion']);
-        if($oUsuarioActivo===null){
-            $entradaOK=false;
-            $aErrores['usuario']='Ya existe un usuario con ese nombre';
-        }
         $aErrores['usuario']= validacionFormularios::comprobarAlfaNumerico($_REQUEST['usuario'],obligatorio:1);//validacion sintactica del campo usuario
-        $aErrores['descripcion']= validacionFormularios::comprobarAlfabetico($_REQUEST['usuario'],32,4,obligatorio:1);//validacion alfabtica del campo descripcion
+        $aErrores['descripcion']= validacionFormularios::comprobarAlfabetico($_REQUEST['descripcion'],32,4,obligatorio:1);//validacion alfabtica del campo descripcion
         foreach ($aErrores as $clave => $valor){
             if($valor!=null){
                 $entradaOK=false;
             }
+        }
+        $oUsuarioActivo= UsuarioPDO::altaUsuario($_REQUEST['usuario'], $_REQUEST['contraseña'],$_REQUEST['descripcion']);
+        if($oUsuarioActivo===null){
+            $entradaOK=false;
+            $aErrores['usuario']='Ya existe un usuario con ese nombre';
         }
     }else{
         $entradaOK=false;
