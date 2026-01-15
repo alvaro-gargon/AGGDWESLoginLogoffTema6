@@ -1,6 +1,6 @@
 <?php
 /*  Nombre: Alvaro Garcia Gonzalez
-*   Fecha: 16/12/2025
+*   Fecha: 15/01/2026
 *   Uso:  controlador del login*/ 
     if(isset($_REQUEST['CANCELAR'])){
         $_SESSION['paginaEnCurso']='inicioPublico';
@@ -19,15 +19,16 @@
         'contraseña'=>null
     ];
     if(isset($_REQUEST['ENTRAR'])){
-        $oUsuarioActivo= UsuarioPDO::validarUsuario($_REQUEST['usuario'], $_REQUEST['contraseña']);
-        if($oUsuarioActivo===null){
-            $entradaOK=false;
-        }
         $aErrores['usuario']= validacionFormularios::comprobarAlfaNumerico($_REQUEST['usuario'],obligatorio:1);//validacion sintactica del campo usuario
+        $aErrores['contraseña']= validacionFormularios::comprobarAlfaNumerico($_REQUEST['contraseña'],obligatorio:1);//validacion sintactica del campo contraseña
         foreach ($aErrores as $clave => $valor){
             if($valor!=null){
                 $entradaOK=false;
             }
+        }
+        $oUsuarioActivo= UsuarioPDO::validarUsuario($_REQUEST['usuario'], $_REQUEST['contraseña']);
+        if($oUsuarioActivo===null){
+            $entradaOK=false;
         }
     }else{
         $entradaOK=false;
