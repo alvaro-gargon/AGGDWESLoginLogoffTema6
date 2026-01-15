@@ -8,7 +8,7 @@
  */
 
 -- me situo en la base de datos
-use DBAGGDWESProyectoLoginLogoffTema6;
+use DBAGGDWESProyectoLoginLogoff;
 
 --relleno los campos
 insert into T02_Departamento (T02_CodDepartamento,T02_DescDepartamento,T02_FechaCreacionDepartamento,T02_VolumenDeNegocio,T02_FechaBajaDepartamento) values

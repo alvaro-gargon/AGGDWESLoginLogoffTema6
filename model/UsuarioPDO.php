@@ -8,7 +8,12 @@ require_once 'Usuario.php';
 require_once 'DBPDO.php';
 class UsuarioPDO {
 
-    //funcion que comprueba si el usuario existe mediante una consulta sql
+    /**
+     * funcion que comprueba si el usuario existe mediante una consulta sql
+     * @param string $codUsuario
+     * @param string $password
+     * @return \Usuario
+     */
     public static function validarUsuario($codUsuario,$password) {
         $oUsuario=null;
         $consultaValidar = <<<CONSULTA
@@ -35,7 +40,10 @@ class UsuarioPDO {
         return $oUsuario;
     }
     
-    //funcion que actualiza las fechas de las conexiones del usuario activo
+    /**
+     * funcion que actualiza las fechas de las conexiones del usuario activo
+     * @param Usuario $oUsuarioAActualizar
+     */
     public static  function actualizarUltimaConexion($oUsuarioAActualizar){
         //actualizamos en la base de datos la fecha de la conexion y el numero de estas
         date_default_timezone_set('Europe/Madrid');
@@ -53,6 +61,31 @@ class UsuarioPDO {
         //ahora se actualiza el usuario en memoria
         $oUsuarioAActualizar->setNumAccesos($oUsuarioAActualizar->getNumAccesos()+1);
         $oUsuarioAActualizar->setFechaHoraUltimaConexion(new DateTime());
+    }
+    /**
+     * funcion para dar de alta un usuario
+     * @param string $codUsuario
+     * @param string $password
+     * @return \Usuario
+     */
+    public static function altaUsuario($codUsuario,$password,$descUsuario) {
+        $oUsuario=null;
+        $consultaComprobarCodigo = <<<CONSULTA
+            SELECT *
+            FROM T01_Usuario 
+            WHERE T01_CodUsuario= '{$codUsuario}'
+            CONSULTA;
+        $resultado= DBPDO::ejecutaConsulta($consultaComprobarCodigo);
+        if($resultado->rowCount()==0){
+            $consultaAlta = <<<CONSULTA
+            INSERT INTO T01_Usuario (T01_CodUsuario, T01_Password, T01_DescUsuario, T01_Perfil) 
+            VALUES ('{$codUsuario}', SHA2('{$codUsuario}{$password}', 256), '{$descUsuario}', 'usuario')
+            CONSULTA;
+        
+            DBPDO::ejecutaConsulta($consultaAlta);
+            $oUsuario= self::validarUsuario($codUsuario, $password);
+        }
+        return $oUsuario;
     }
 }
 

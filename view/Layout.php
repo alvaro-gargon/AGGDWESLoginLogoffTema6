@@ -17,7 +17,13 @@
     <footer>
         <p><a target="_blank" href="https://alvarogargon.ieslossauces.es/">Álvaro García González</a></p>
         <a target="_blank" href="https://github.com/alvaro-gargon/AGGDWESLoginLogoffTema6"><i class="fa fa-github fa-2x"></i></a>
-        <p>Última actualización <time datetime="2025-12-16">16/12/2025</time></p>
+        <section>
+            <h4>Documentacion con:</h3>
+            <a target="_blank" href="doc/phpDocumentor/index.html">phpDocumentor</a>
+            |
+            <a target="_blank" href="doc/doxygen/html/index.html">Doxygen</a>
+        </section>
+        <p>Última actualización <time datetime="2026-01-14">14/01/2026</time></p>
     </footer>
 </body>
 </html>

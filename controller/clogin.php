@@ -7,6 +7,11 @@
         header('Location: indexLoginLogoff.php');
         exit;
     }
+    if(isset($_REQUEST['REGISTRARSE'])){
+        $_SESSION['paginaEnCurso']='registro';
+        header('Location: indexLoginLogoff.php');
+        exit;
+    }
     $entradaOK=true; //boolean para comprobar si el formulario esta correcto o no
     //array donde recojo los errores si los hubiera
     $aErrores=[
