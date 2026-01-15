@@ -13,8 +13,11 @@ class DBPDO {
         $consultaPreparada->execute($parametros);
         return $consultaPreparada;
     }catch(PDOException $exception){
-        echo("Error: " . $exception->getMessage());
-        echo("Codigo error: " . $exception->getCode());
+        $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+        $_SESSION['paginaEnCurso'] = 'error';
+        $_SESSION['error'] = new AppError($exception->getCode(),$exception->getMessage(),$exception->getFile(),$exception->getLine());
+        header('Location: indexLoginLogoff.php');
+        exit;
     }finally{
         unset($miDB);
     }

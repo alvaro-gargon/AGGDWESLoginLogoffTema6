@@ -31,3 +31,6 @@
 <form method="post">
     <button class="detalle" name="WIP">WIP</button>
 </form>
+<form method="post">
+    <button class="detalle" name="ERROR">Error</button>
+</form>

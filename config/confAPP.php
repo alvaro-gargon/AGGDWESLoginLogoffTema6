@@ -5,11 +5,12 @@
 *   Uso:  requires de todos los archivos del modelo necesitado*/ 
 //incluyo la libreria de validacion
 require_once 'core/231018libreriaValidacion.php';
+
+//aqui se incluyen todos los archivos del modelo
 require_once 'model/UsuarioPDO.php';
 require_once 'model/DBPDO.php';
 require_once 'model/Usuario.php';
-//aqui se incluyen todos los archivos del modelo
-
+require_once 'model/AppError.php';
 
 //array para cargar los archivos del controlador
 $controller=[
@@ -18,8 +19,7 @@ $controller=[
     'inicioPrivado'=>'controller/cInicioPrivado.php',
     'detalle'=>'controller/cDetalle.php',
     'registro'=>'controller/cRegistro.php',
-    'miCuenta'=>'controller/cMiCuenta.php',
-    'borrarCuenta'=>'controller/cBorrarCuenta.php',
+    'error'=>'controller/cError.php',
     'WIP'=>'controller/cWIP.php'
 ];
 
@@ -31,8 +31,7 @@ $view=[
     'inicioPrivado'=>'view/vInicioPrivado.php',
     'detalle'=>'view/vDetalle.php',
     'registro'=>'view/vRegistro.php',
-    'miCuenta'=>'view/vMiCuenta.php',
-    'borrarCuenta'=>'view/vBorrarCuenta.php',
+    'error'=>'view/vError.php',
     'WIP'=>'view/vWIP.php'
 ];
 ?>
