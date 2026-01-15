@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My prueba: C:/Users/alvaro.gargon.4/ProyectoNetBeans/AGGDWESLoginLogoffTema6/config/confAPP.php Source File</title>
+<title>LoginLogoff: C:/Users/alvaro.gargon.4/ProyectoNetBeans/AGGDWESLoginLogoffTema6/config/confAPP.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My prueba
+   <div id="projectname">LoginLogoff
    </div>
-   <div id="projectbrief">Prueba</div>
+   <div id="projectbrief">Project loginlogoff</div>
   </td>
  </tr>
  </tbody>
@@ -99,21 +99,21 @@ $(function(){initNavTree('conf_a_p_p_8php_source.html','',''); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">*   Uso:  requires de todos los archivos del modelo necesitado*/</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//incluyo la libreria de validacion</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>require_once <span class="stringliteral">&#39;core/231018libreriaValidacion.php&#39;</span>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>require_once <span class="stringliteral">&#39;model/UsuarioPDO.php&#39;</span>;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>require_once <span class="stringliteral">&#39;model/DBPDO.php&#39;</span>;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>require_once <span class="stringliteral">&#39;model/Usuario.php&#39;</span>;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//aqui se incluyen todos los archivos del modelo</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//array para cargar los archivos del controlador</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="conf_a_p_p_8php.html#a388ef7b1db5e6f728e63cee704ce6e23">   15</a></span><a class="code hl_variable" href="conf_a_p_p_8php.html#a388ef7b1db5e6f728e63cee704ce6e23">$controller</a>=[</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="stringliteral">&#39;inicioPublico&#39;</span> =&gt; <span class="stringliteral">&#39;controller/cInicioPublico.php&#39;</span>,</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="stringliteral">&#39;login&#39;</span> =&gt; <span class="stringliteral">&#39;controller/clogin.php&#39;</span>,</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="stringliteral">&#39;inicioPrivado&#39;</span>=&gt;<span class="stringliteral">&#39;controller/cInicioPrivado.php&#39;</span>,</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="stringliteral">&#39;detalle&#39;</span>=&gt;<span class="stringliteral">&#39;controller/cDetalle.php&#39;</span>,</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="stringliteral">&#39;registro&#39;</span>=&gt;<span class="stringliteral">&#39;controller/cRegistro.php&#39;</span>,</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="stringliteral">&#39;miCuenta&#39;</span>=&gt;<span class="stringliteral">&#39;controller/cMiCuenta.php&#39;</span>,</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="stringliteral">&#39;borrarCuenta&#39;</span>=&gt;<span class="stringliteral">&#39;controller/cBorrarCuenta.php&#39;</span>,</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//aqui se incluyen todos los archivos del modelo</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>require_once <span class="stringliteral">&#39;model/UsuarioPDO.php&#39;</span>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>require_once <span class="stringliteral">&#39;model/DBPDO.php&#39;</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>require_once <span class="stringliteral">&#39;model/Usuario.php&#39;</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>require_once <span class="stringliteral">&#39;model/AppError.php&#39;</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//array para cargar los archivos del controlador</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="conf_a_p_p_8php.html#a388ef7b1db5e6f728e63cee704ce6e23">   16</a></span><a class="code hl_variable" href="conf_a_p_p_8php.html#a388ef7b1db5e6f728e63cee704ce6e23">$controller</a>=[</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="stringliteral">&#39;inicioPublico&#39;</span> =&gt; <span class="stringliteral">&#39;controller/cInicioPublico.php&#39;</span>,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="stringliteral">&#39;login&#39;</span> =&gt; <span class="stringliteral">&#39;controller/clogin.php&#39;</span>,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="stringliteral">&#39;inicioPrivado&#39;</span>=&gt;<span class="stringliteral">&#39;controller/cInicioPrivado.php&#39;</span>,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="stringliteral">&#39;detalle&#39;</span>=&gt;<span class="stringliteral">&#39;controller/cDetalle.php&#39;</span>,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="stringliteral">&#39;registro&#39;</span>=&gt;<span class="stringliteral">&#39;controller/cRegistro.php&#39;</span>,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="stringliteral">&#39;error&#39;</span>=&gt;<span class="stringliteral">&#39;controller/cError.php&#39;</span>,</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="stringliteral">&#39;WIP&#39;</span>=&gt;<span class="stringliteral">&#39;controller/cWIP.php&#39;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>];</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
@@ -125,12 +125,11 @@ $(function(){initNavTree('conf_a_p_p_8php_source.html','',''); });
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="stringliteral">&#39;inicioPrivado&#39;</span>=&gt;<span class="stringliteral">&#39;view/vInicioPrivado.php&#39;</span>,</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="stringliteral">&#39;detalle&#39;</span>=&gt;<span class="stringliteral">&#39;view/vDetalle.php&#39;</span>,</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="stringliteral">&#39;registro&#39;</span>=&gt;<span class="stringliteral">&#39;view/vRegistro.php&#39;</span>,</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="stringliteral">&#39;miCuenta&#39;</span>=&gt;<span class="stringliteral">&#39;view/vMiCuenta.php&#39;</span>,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="stringliteral">&#39;borrarCuenta&#39;</span>=&gt;<span class="stringliteral">&#39;view/vBorrarCuenta.php&#39;</span>,</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="stringliteral">&#39;WIP&#39;</span>=&gt;<span class="stringliteral">&#39;view/vWIP.php&#39;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>];</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>?&gt;</div>
-<div class="ttc" id="aconf_a_p_p_8php_html_a388ef7b1db5e6f728e63cee704ce6e23"><div class="ttname"><a href="conf_a_p_p_8php.html#a388ef7b1db5e6f728e63cee704ce6e23">$controller</a></div><div class="ttdeci">$controller</div><div class="ttdef"><b>Definition</b> <a href="#l00015">confAPP.php:15</a></div></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="stringliteral">&#39;error&#39;</span>=&gt;<span class="stringliteral">&#39;view/vError.php&#39;</span>,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="stringliteral">&#39;WIP&#39;</span>=&gt;<span class="stringliteral">&#39;view/vWIP.php&#39;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>];</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>?&gt;</div>
+<div class="ttc" id="aconf_a_p_p_8php_html_a388ef7b1db5e6f728e63cee704ce6e23"><div class="ttname"><a href="conf_a_p_p_8php.html#a388ef7b1db5e6f728e63cee704ce6e23">$controller</a></div><div class="ttdeci">$controller</div><div class="ttdef"><b>Definition</b> <a href="#l00016">confAPP.php:16</a></div></div>
 <div class="ttc" id="aconf_a_p_p_8php_html_acccf2eac8663e0cebe8101e90fbab089"><div class="ttname"><a href="conf_a_p_p_8php.html#acccf2eac8663e0cebe8101e90fbab089">$view</a></div><div class="ttdeci">$view</div><div class="ttdef"><b>Definition</b> <a href="#l00027">confAPP.php:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

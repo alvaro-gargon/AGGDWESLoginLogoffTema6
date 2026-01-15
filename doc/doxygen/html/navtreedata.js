@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "My prueba", "index.html", [
+  [ "LoginLogoff", "index.html", [
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],

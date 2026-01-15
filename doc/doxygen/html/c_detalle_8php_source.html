@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My prueba: C:/Users/alvaro.gargon.4/ProyectoNetBeans/AGGDWESLoginLogoffTema6/controller/cDetalle.php Source File</title>
+<title>LoginLogoff: C:/Users/alvaro.gargon.4/ProyectoNetBeans/AGGDWESLoginLogoffTema6/controller/cDetalle.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My prueba
+   <div id="projectname">LoginLogoff
    </div>
-   <div id="projectbrief">Prueba</div>
+   <div id="projectbrief">Project loginlogoff</div>
   </td>
  </tr>
  </tbody>
@@ -96,14 +96,20 @@ $(function(){initNavTree('c_detalle_8php_source.html','',''); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*  Nombre: Alvaro Garcia Gonzalez</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">*   Fecha: 16/12/2025</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">*   Uso:  controlador del detalle*/</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="c_detalle_8php.html#a0af9374e0822101860d02b9395bd5a05">    6</a></span>    <span class="keywordflow">if</span>(isset($_REQUEST[<span class="stringliteral">&#39;VOLVER&#39;</span>])){</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        $_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>]=<span class="stringliteral">&#39;inicioPrivado&#39;</span>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="comment">//este if se usa para que los usuarios no se salten el control de acceso</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keywordflow">if</span>(empty($_SESSION[<span class="stringliteral">&#39;usuarioMiAplicacion&#39;</span>])){</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        $_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>]=<span class="stringliteral">&#39;inicioPublico&#39;</span>;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        header(<span class="stringliteral">&#39;Location: indexLoginLogoff.php&#39;</span>);</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        exit;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    }</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    require_once <a class="code hl_variable" href="conf_a_p_p_8php.html#acccf2eac8663e0cebe8101e90fbab089">$view</a>[<span class="stringliteral">&#39;layout&#39;</span>];</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    ?&gt;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="c_detalle_8php.html#a0af9374e0822101860d02b9395bd5a05">   12</a></span>    <span class="keywordflow">if</span>(isset($_REQUEST[<span class="stringliteral">&#39;VOLVER&#39;</span>])){</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        $_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>]=<span class="stringliteral">&#39;inicioPrivado&#39;</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        header(<span class="stringliteral">&#39;Location: indexLoginLogoff.php&#39;</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        exit;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    require_once <a class="code hl_variable" href="conf_a_p_p_8php.html#acccf2eac8663e0cebe8101e90fbab089">$view</a>[<span class="stringliteral">&#39;layout&#39;</span>];</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    ?&gt;</div>
 <div class="ttc" id="aconf_a_p_p_8php_html_acccf2eac8663e0cebe8101e90fbab089"><div class="ttname"><a href="conf_a_p_p_8php.html#acccf2eac8663e0cebe8101e90fbab089">$view</a></div><div class="ttdeci">$view</div><div class="ttdef"><b>Definition</b> <a href="conf_a_p_p_8php_source.html#l00027">confAPP.php:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

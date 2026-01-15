@@ -2,6 +2,7 @@ var dir_d3bff1ab3a40b4e5d0775c67ace1b0da =
 [
     [ "cBorrarCuenta.php", "c_borrar_cuenta_8php.html", null ],
     [ "cDetalle.php", "c_detalle_8php.html", "c_detalle_8php" ],
+    [ "cError.php", "c_error_8php.html", "c_error_8php" ],
     [ "cInicioPrivado.php", "c_inicio_privado_8php.html", "c_inicio_privado_8php" ],
     [ "cInicioPublico.php", "c_inicio_publico_8php.html", "c_inicio_publico_8php" ],
     [ "clogin.php", "clogin_8php.html", "clogin_8php" ],

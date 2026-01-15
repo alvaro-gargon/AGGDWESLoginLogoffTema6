@@ -101,6 +101,76 @@ Search.appendIndex(
             "summary": "Basada\u0020en\u0020validarAlfanumerico,\u0020esta\u0020funci\u00F3n\u0020comprueba\u0020si\u0020el\u0020nombre\u0020de\u0020un\narchivo\u0020tiene\u0020una\u0020extensi\u00F3n\u0020v\u00E1lida\u0020entre\u0020un\u0020array\u0020de\u0020extensiones\u0020admitidas.",
             "url": "classes/validacionFormularios.html#method_validarNombreArchivo"
         },                {
+            "fqsen": "\\AppError",
+            "name": "AppError",
+            "summary": "",
+            "url": "classes/AppError.html"
+        },                {
+            "fqsen": "\\AppError\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/AppError.html#method___construct"
+        },                {
+            "fqsen": "\\AppError\u003A\u003AgetCodError\u0028\u0029",
+            "name": "getCodError",
+            "summary": "",
+            "url": "classes/AppError.html#method_getCodError"
+        },                {
+            "fqsen": "\\AppError\u003A\u003AgetDescError\u0028\u0029",
+            "name": "getDescError",
+            "summary": "",
+            "url": "classes/AppError.html#method_getDescError"
+        },                {
+            "fqsen": "\\AppError\u003A\u003AgetArchivoError\u0028\u0029",
+            "name": "getArchivoError",
+            "summary": "",
+            "url": "classes/AppError.html#method_getArchivoError"
+        },                {
+            "fqsen": "\\AppError\u003A\u003AgetLineaError\u0028\u0029",
+            "name": "getLineaError",
+            "summary": "",
+            "url": "classes/AppError.html#method_getLineaError"
+        },                {
+            "fqsen": "\\AppError\u003A\u003AsetCodError\u0028\u0029",
+            "name": "setCodError",
+            "summary": "",
+            "url": "classes/AppError.html#method_setCodError"
+        },                {
+            "fqsen": "\\AppError\u003A\u003AsetDescError\u0028\u0029",
+            "name": "setDescError",
+            "summary": "",
+            "url": "classes/AppError.html#method_setDescError"
+        },                {
+            "fqsen": "\\AppError\u003A\u003AsetArchivoError\u0028\u0029",
+            "name": "setArchivoError",
+            "summary": "",
+            "url": "classes/AppError.html#method_setArchivoError"
+        },                {
+            "fqsen": "\\AppError\u003A\u003AsetLineaError\u0028\u0029",
+            "name": "setLineaError",
+            "summary": "",
+            "url": "classes/AppError.html#method_setLineaError"
+        },                {
+            "fqsen": "\\AppError\u003A\u003A\u0024codError",
+            "name": "codError",
+            "summary": "",
+            "url": "classes/AppError.html#property_codError"
+        },                {
+            "fqsen": "\\AppError\u003A\u003A\u0024descError",
+            "name": "descError",
+            "summary": "",
+            "url": "classes/AppError.html#property_descError"
+        },                {
+            "fqsen": "\\AppError\u003A\u003A\u0024archivoError",
+            "name": "archivoError",
+            "summary": "",
+            "url": "classes/AppError.html#property_archivoError"
+        },                {
+            "fqsen": "\\AppError\u003A\u003A\u0024lineaError",
+            "name": "lineaError",
+            "summary": "",
+            "url": "classes/AppError.html#property_lineaError"
+        },                {
             "fqsen": "\\DBPDO",
             "name": "DBPDO",
             "summary": "",
@@ -243,7 +313,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\UsuarioPDO\u003A\u003AaltaUsuario\u0028\u0029",
             "name": "altaUsuario",
-            "summary": "",
+            "summary": "funcion\u0020para\u0020dar\u0020de\u0020alta\u0020un\u0020usuario",
             "url": "classes/UsuarioPDO.html#method_altaUsuario"
         },                {
             "fqsen": "\\",

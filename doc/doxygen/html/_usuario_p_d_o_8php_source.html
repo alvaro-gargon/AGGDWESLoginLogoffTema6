@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My prueba: C:/Users/alvaro.gargon.4/ProyectoNetBeans/AGGDWESLoginLogoffTema6/model/UsuarioPDO.php Source File</title>
+<title>LoginLogoff: C:/Users/alvaro.gargon.4/ProyectoNetBeans/AGGDWESLoginLogoffTema6/model/UsuarioPDO.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My prueba
+   <div id="projectname">LoginLogoff
    </div>
-   <div id="projectbrief">Prueba</div>
+   <div id="projectbrief">Project loginlogoff</div>
   </td>
  </tr>
  </tbody>
@@ -155,25 +155,29 @@ $(function(){initNavTree('_usuario_p_d_o_8php_source.html','',''); });
 <div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_usuario_p_d_o.html#a7a5176f4bfba2cf39eca0462195676b8">   71</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_usuario_p_d_o.html#a7a5176f4bfba2cf39eca0462195676b8">altaUsuario</a>($codUsuario,$password,$descUsuario) {</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        $oUsuario=<span class="keyword">null</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">try</span>{</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        $consultaValidar = &lt;&lt;&lt;CONSULTA</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            INSERT INTO T01_Usuario (T01_CodUsuario, T01_Password, T01_DescUsuario, T01_Perfil) </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            VALUES ({$codUsuario}, SHA2({$codUsuario}{$password}, 256), {$descUsuario}, <span class="stringliteral">&#39;usuario&#39;</span>)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        $consultaComprobarCodigo = &lt;&lt;&lt;CONSULTA</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            SELECT *</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            FROM T01_Usuario </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            WHERE T01_CodUsuario= <span class="stringliteral">&#39;{$codUsuario}&#39;</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            CONSULTA;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_function" href="class_d_b_p_d_o.html#a66762029a50876685e415965fa1e2227">DBPDO::ejecutaConsulta</a>($consultaValidar);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        $oUsuario= <a class="code hl_function" href="class_usuario_p_d_o.html#ae85b032587e9e5fa8844d0431f32578e">self::validarUsuario</a>($codUsuario, $password);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        } <span class="keywordflow">catch</span>(PDOException $exception){</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">return</span> $oUsuario;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        $resultado= <a class="code hl_function" href="class_d_b_p_d_o.html#a66762029a50876685e415965fa1e2227">DBPDO::ejecutaConsulta</a>($consultaComprobarCodigo);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">if</span>($resultado-&gt;rowCount()==0){</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            $consultaAlta = &lt;&lt;&lt;CONSULTA</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            INSERT INTO T01_Usuario (T01_CodUsuario, T01_Password, T01_DescUsuario, T01_Perfil) </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            VALUES (<span class="stringliteral">&#39;{$codUsuario}&#39;</span>, SHA2(<span class="stringliteral">&#39;{$codUsuario}{$password}&#39;</span>, 256), <span class="stringliteral">&#39;{$descUsuario}&#39;</span>, <span class="stringliteral">&#39;usuario&#39;</span>)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            CONSULTA;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <a class="code hl_function" href="class_d_b_p_d_o.html#a66762029a50876685e415965fa1e2227">DBPDO::ejecutaConsulta</a>($consultaAlta);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            $oUsuario= <a class="code hl_function" href="class_usuario_p_d_o.html#ae85b032587e9e5fa8844d0431f32578e">self::validarUsuario</a>($codUsuario, $password);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">return</span> $oUsuario;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
 </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
 </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>?&gt;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>?&gt;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="ttc" id="aclass_d_b_p_d_o_html_a66762029a50876685e415965fa1e2227"><div class="ttname"><a href="class_d_b_p_d_o.html#a66762029a50876685e415965fa1e2227">DBPDO\ejecutaConsulta</a></div><div class="ttdeci">static ejecutaConsulta($sentenciaSQL, $parametros=null)</div><div class="ttdef"><b>Definition</b> <a href="_d_b_p_d_o_8php_source.html#l00009">DBPDO.php:9</a></div></div>
 <div class="ttc" id="aclass_usuario_html"><div class="ttname"><a href="class_usuario.html">Usuario</a></div><div class="ttdef"><b>Definition</b> <a href="_usuario_8php_source.html#l00006">Usuario.php:6</a></div></div>
 <div class="ttc" id="aclass_usuario_p_d_o_html"><div class="ttname"><a href="class_usuario_p_d_o.html">UsuarioPDO</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">UsuarioPDO.php:9</a></div></div>

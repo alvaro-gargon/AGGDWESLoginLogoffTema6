@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['layout_2ephp_0',['Layout.php',['../_layout_8php.html',1,'']]]
+  ['indexloginlogoff_2ephp_0',['indexLoginLogoff.php',['../index_login_logoff_8php.html',1,'']]]
 ];

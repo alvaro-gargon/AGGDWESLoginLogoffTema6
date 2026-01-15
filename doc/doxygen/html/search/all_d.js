@@ -14,10 +14,11 @@ var searchData=
   ['validarusuario_11',['validarUsuario',['../class_usuario_p_d_o.html#ae85b032587e9e5fa8844d0431f32578e',1,'UsuarioPDO']]],
   ['vborrarcuenta_2ephp_12',['vBorrarCuenta.php',['../v_borrar_cuenta_8php.html',1,'']]],
   ['vdetalle_2ephp_13',['vDetalle.php',['../v_detalle_8php.html',1,'']]],
-  ['vinicioprivado_2ephp_14',['vInicioPrivado.php',['../v_inicio_privado_8php.html',1,'']]],
-  ['viniciopublico_2ephp_15',['vInicioPublico.php',['../v_inicio_publico_8php.html',1,'']]],
-  ['vlogin_2ephp_16',['vlogin.php',['../vlogin_8php.html',1,'']]],
-  ['vmicuenta_2ephp_17',['vMiCuenta.php',['../v_mi_cuenta_8php.html',1,'']]],
-  ['vregistro_2ephp_18',['vRegistro.php',['../v_registro_8php.html',1,'']]],
-  ['vwip_2ephp_19',['vWIP.php',['../v_w_i_p_8php.html',1,'']]]
+  ['verror_2ephp_14',['vError.php',['../v_error_8php.html',1,'']]],
+  ['vinicioprivado_2ephp_15',['vInicioPrivado.php',['../v_inicio_privado_8php.html',1,'']]],
+  ['viniciopublico_2ephp_16',['vInicioPublico.php',['../v_inicio_publico_8php.html',1,'']]],
+  ['vlogin_2ephp_17',['vlogin.php',['../vlogin_8php.html',1,'']]],
+  ['vmicuenta_2ephp_18',['vMiCuenta.php',['../v_mi_cuenta_8php.html',1,'']]],
+  ['vregistro_2ephp_19',['vRegistro.php',['../v_registro_8php.html',1,'']]],
+  ['vwip_2ephp_20',['vWIP.php',['../v_w_i_p_8php.html',1,'']]]
 ];
